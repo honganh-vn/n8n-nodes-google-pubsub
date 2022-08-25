@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-google-pubsub-thanh-custom",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Google Pub/Sub Nodes for n8n.",
   "license": "SEE LICENSE IN LICENSE.md",
   "homepage": "https://n8n.io",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/honganh-vn/n8n-google-pubsub-nodes.git"
+    "url": "git+https://github.com/honganh-vn/n8n-nodes-google-pubsub.git"
   },
   "scripts": {
     "dev": "npm run watch",

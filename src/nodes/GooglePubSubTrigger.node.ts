@@ -67,14 +67,16 @@ export class GooglePubSubTrigger implements INodeType {
 
 	async trigger(this: ITriggerFunctions): Promise<ITriggerResponse> {
 
-		const credentials = this.getCredentials('googleApi');
+		const credentials = await this.getCredentials('googleApi');
 		if (!credentials) {
 			throw new Error('Credentials are mandatory!');
 		}
+		let privateKey = credentials.privateKey as string;
+		privateKey = privateKey.replace(/\\n/gm, '\n');
 		const auth = new GoogleAuth({
 			credentials: {
 				client_email: credentials.email as string,
-				private_key: credentials.privateKey as string,
+				private_key: privateKey,
 			}
 		});
 

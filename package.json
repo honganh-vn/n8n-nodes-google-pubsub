@@ -1,16 +1,16 @@
 {
-  "name": "n8n-nodes-google-pubsub",
+  "name": "n8n-nodes-google-pubsub-thanh-custom",
   "version": "0.3.2",
   "description": "Google Pub/Sub Nodes for n8n.",
   "license": "SEE LICENSE IN LICENSE.md",
   "homepage": "https://n8n.io",
   "author": {
-    "name": "François Voron",
-    "email": "fvoron@gmail.com"
+    "name": "Phan Thanh",
+    "email": "thanhpd56@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frankie567/n8n-google-pubsub-nodes.git"
+    "url": "git+https://github.com/honganh-vn/n8n-google-pubsub-nodes.git"
   },
   "scripts": {
     "dev": "npm run watch",

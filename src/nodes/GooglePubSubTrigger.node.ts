@@ -94,9 +94,15 @@ export class GooglePubSubTrigger implements INodeType {
 
 		subscription.on('message', (message) => {
 			const decodedData = message.data.toString('utf-8');
+			let data = {};
+			try {
+				data = decodeJSON ? JSON.parse(decodedData) : decodedData;
+			} catch (e) {
+				console.warn(e);
+			}
 			this.emit([this.helpers.returnJsonArray([{
 				id: message.id,
-				data: decodeJSON ? JSON.parse(decodedData) : decodedData,
+				data,
 				attributes: message.attributes,
 			}])]);
 			message.ack();

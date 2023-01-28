@@ -60,3 +60,12 @@ This node will listen to message on a topic's subscription and trigger whenever 
 ### Google Pub/Sub
 
 > ⏳Coming soon: node to publish messages in a Pub/Sub topic.
+
+## How to install private node:
+- Make sure n8n is installed globally `npm install n8n -g`
+- Build node: `npm run build`
+- Publish locally: `npm link`
+- Cd to custom node folder of n8n `cd ~/.n8n/custom`
+- Link node to n8n: `npm link n8n-nodes-google-pubsub-thanh-custom`
+- Back to node directory, then change to docker directory `cd docker/images/n8n`
+- Build dockerfile: `docker build --build-arg N8N_VERSION=0.212.1 --tag=thanhpd56/n8n:0.212.1.1 .`
